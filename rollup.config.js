@@ -4,23 +4,25 @@ import filesize from 'rollup-plugin-filesize'
 
 export default [
   {
-    entry: 'lib/index.js',
-    dest: 'tarts.js',
-    format: 'umd',
-    moduleName: 'Tar',
-    sourceMap: true,
-    exports: 'default',
+    input: 'lib/index.js',
+    output: {
+      file: 'tarts.js',
+      format: 'umd',
+      name: 'Tar',
+      sourcemap: true
+    },
     plugins: [
       buble(),
       filesize()
     ]
   }, {
-    entry: 'lib/index.js',
-    dest: 'tarts.min.js',
-    format: 'umd',
-    moduleName: 'Tar',
-    sourceMap: true,
-    exports: 'default',
+    input: 'lib/index.js',
+    output: {
+      file: 'tarts.min.js',
+      format: 'umd',
+      name: 'Tar',
+      sourcemap: true
+    },
     plugins: [
       buble(),
       uglify({ mangle: true, compress: true }),

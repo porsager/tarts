@@ -25,7 +25,7 @@ export default [
     },
     plugins: [
       buble(),
-      uglify({ mangle: true, compress: true }),
+      uglify.uglify({ mangle: true, compress: true }),
       filesize()
     ]
   }

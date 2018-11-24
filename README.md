@@ -1,4 +1,4 @@
-# Tarts
+# 🥧 Tarts
 
 Create tarballs in node or the browser. `Tarts` is a simple function that takes an array of files and returns a tarball as a `Uint8Array`.
 

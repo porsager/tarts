@@ -6,7 +6,7 @@ export default [
   {
     input: 'lib/index.js',
     output: {
-      file: 'tarts.js',
+      file: 'dist/tarts.js',
       format: 'umd',
       name: 'Tar',
       sourcemap: true
@@ -18,7 +18,7 @@ export default [
   }, {
     input: 'lib/index.js',
     output: {
-      file: 'tarts.min.js',
+      file: 'dist/tarts.min.js',
       format: 'umd',
       name: 'Tar',
       sourcemap: true

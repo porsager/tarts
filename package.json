@@ -1,6 +1,6 @@
 {
   "name": "tarts",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Create tarballs in node or the browser",
   "main": "dist/tarts.js",
   "module": "lib/index.js",

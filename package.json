@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/porsager/tarts#readme",
   "devDependencies": {
-    "rollup": "1.14.6",
-    "rollup-plugin-buble": "0.19.6",
-    "rollup-plugin-filesize": "6.1.0",
-    "rollup-plugin-uglify": "6.0.2"
+    "rollup": "1.27.14",
+    "rollup-plugin-buble": "0.19.8",
+    "rollup-plugin-filesize": "6.2.1",
+    "rollup-plugin-uglify": "6.0.4"
   }
 }

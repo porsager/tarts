@@ -15,6 +15,7 @@
     "url": "git+https://github.com/porsager/tarts.git"
   },
   "scripts": {
+    "test": "echo please PR",
     "prepublishOnly": "npm run build",
     "build": "node -e 'fs.writeFileSync(\"tarts.iife.js\",\";(function(g){\"+fs.readFileSync(\"tarts.js\",\"utf8\").replace(\"export default tarts\",`typeof exports===\"object\"&&typeof module\\!==\"undefined\"?module.exports=tarts:((g?g:self).tarts=tarts);`) + \"})(this);\")'"
   },

@@ -2,15 +2,21 @@
   "name": "tarts",
   "version": "1.0.0",
   "description": "Create tarballs in node or the browser",
-  "main": "dist/tarts.js",
-  "module": "lib/index.js",
+  "type": "module",
+  "module": "tarts.js",
+  "browser": "tarts.umd.js",
+  "main": "tarts.umd.js",
+  "exports": {
+    "import": "./tarts.js",
+    "default": "./tarts.umd.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/porsager/tarts.git"
   },
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "rollup -c"
+    "prepublishOnly": "npm run build",
+    "build": "node -e 'fs.writeFileSync(\"tarts.iife.js\",\";(function(g){\"+fs.readFileSync(\"tarts.js\",\"utf8\").replace(\"export default tarts\",`typeof exports===\"object\"&&typeof module\\!==\"undefined\"?module.exports=tarts:((g?g:self).tarts=tarts);`) + \"})(this);\")'"
   },
   "keywords": [
     "tar",
@@ -24,11 +30,5 @@
   "bugs": {
     "url": "https://github.com/porsager/tarts/issues"
   },
-  "homepage": "https://github.com/porsager/tarts#readme",
-  "devDependencies": {
-    "rollup": "1.27.14",
-    "rollup-plugin-buble": "0.19.8",
-    "rollup-plugin-filesize": "6.2.1",
-    "rollup-plugin-uglify": "6.0.4"
-  }
+  "homepage": "https://github.com/porsager/tarts#readme"
 }

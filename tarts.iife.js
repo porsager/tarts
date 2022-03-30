@@ -1,3 +1,5 @@
+;(function(g){typeof exports==="object"&&typeof module!=="undefined"?module.exports=tarts:((g?g:self).tarts=tarts);
+
 const headers = {
   name: 100,
   mode: 8,
@@ -42,7 +44,7 @@ const defaults = f => ({
 const nopad = ['name', 'linkname', 'magic', 'chksum', 'typeflag', 'version', 'uname', 'gname']
     , bsize = 512
 
-export default files => {
+function tarts(files) {
   return files.reduce((a, f) => {
     if (typeof f.content === 'string')
       f.content = stringToUint8(f.content)
@@ -85,3 +87,4 @@ function stringToUint8(s) {
     a[i] = s.charCodeAt(i)
   return a
 }
+})(this);
